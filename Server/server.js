@@ -1,9 +1,17 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 require('dotenv').config();
 const twilio = require('twilio');
 
 const app = express();
+app.use(cors(
+    {
+        origin: ['https://fishing-website.vercel.app/'],
+        methods:["POST","GET"],
+        credentials:true
+    }
+))
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Replace with your Twilio credentials
